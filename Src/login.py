@@ -1,5 +1,3 @@
-# login.py
-
 users = {
     "Indhuthi": "1234",
     "Jonna": "abcd",
