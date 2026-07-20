@@ -1,3 +1,4 @@
+Hii! I hate Joanna
 # DevOps Lab - Exercise 3
 
 ## Repository Overview
