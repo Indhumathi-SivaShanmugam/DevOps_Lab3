@@ -207,3 +207,27 @@ git revert <commit-id>
 ## Conclusion
 
 This exercise demonstrates collaborative software development using Git and GitHub, helping students understand version control, teamwork, conflict resolution, and advanced Git operations commonly used in DevOps workflows.
+
+
+
+# registration.py
+
+users = {
+    "admin": "1234",
+    "john": "abcd",
+    "alice": "pass123",
+    "bob": "bob@123"
+}
+
+username = input("Choose a username: ")
+
+if username in users:
+    print("Username already exists!")
+else:
+    password = input("Choose a password: ")
+    users[username] = password
+    print("Registration successful!")
+
+print("\nRegistered Users:")
+for user in users:
+    print(user)
