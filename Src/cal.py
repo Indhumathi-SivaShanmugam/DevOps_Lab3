@@ -1,0 +1,1 @@
+print ("Asssume this is a calculator")
