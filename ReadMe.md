@@ -128,6 +128,113 @@ Example:
 git cherry-pick <commit-id>
 ```
 
+## Task 6 – Cherry Pick
+
+### Objective
+Student A should bring **only** `calculator.py` from Student B's branch into the `master` branch without merging the entire branch.
+
+---
+
+### Student B
+
+Create a new branch.
+
+```bash
+git checkout -b calculator-feature
+```
+
+Create `Src/calculator.py`.
+
+Stage and commit the file.
+
+```bash
+git add Src/calculator.py
+git commit -m "Added calculator module"
+```
+
+Push the branch to GitHub.
+
+```bash
+git push origin calculator-feature
+```
+
+---
+
+### Student C
+
+Create a new branch.
+
+```bash
+git checkout -b report-feature
+```
+
+Create `Src/report.py`.
+
+Stage and commit the file.
+
+```bash
+git add Src/report.py
+git commit -m "Added report module"
+```
+
+Push the branch to GitHub.
+
+```bash
+git push origin report-feature
+```
+
+---
+
+### Student A
+
+Switch to the `master` branch.
+
+```bash
+git checkout master
+```
+
+Fetch the latest branches from GitHub.
+
+```bash
+git fetch origin
+```
+
+View the commit history of Student B's branch.
+
+```bash
+git log origin/calculator-feature --oneline
+```
+
+Copy the commit hash of **"Added calculator module"** and cherry-pick it into `master`.
+
+```bash
+git cherry-pick <commit-hash>
+```
+
+Push the updated `master` branch.
+
+```bash
+git push origin master
+```
+
+---
+
+### Result
+
+Only `calculator.py` is added to the `master` branch.
+
+```
+master
+│
+├── README.md
+├── Src
+│   ├── login.py
+│   ├── register.py
+│   └── calculator.py
+```
+
+`report.py` remains only in the `report-feature` branch.
+
 ---
 
 ### Task 7 – Revert
